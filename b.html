@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Kundan Raj Silwal's personal machine learning portfolio.">
+  <title>Kundan Raj Silwal - Portfolio</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap');
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(135deg, #1e3c72, #2a5298);
+      color: #f0f0f0;
+      line-height: 1.6;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 40px 20px;
+      position: relative;
+      overflow-x: hidden;
+    }
+
+    /* Background effects */
+    body::before, body::after {
+      content: '';
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      background: radial-gradient(circle at 10% 20%, rgba(255, 75, 43, 0.2), transparent 70%),
+                  radial-gradient(circle at 90% 80%, rgba(255, 255, 255, 0.1), transparent 70%);
+      z-index: -1;
+      animation: moveBackground 20s infinite alternate ease-in-out;
+    }
+
+    @keyframes moveBackground {
+      0% {
+        background-position: 0% 0%, 100% 100%;
+      }
+      100% {
+        background-position: 100% 100%, 0% 0%;
+      }
+    }
+
+    .blur-circle {
+      position: absolute;
+      border-radius: 50%;
+      filter: blur(80px);
+      z-index: -2;
+      opacity: 0.5;
+      animation: float 15s ease-in-out infinite;
+    }
+
+    .circle1 {
+      background: #ff416c;
+      width: 300px;
+      height: 300px;
+      top: 10%;
+      left: -100px;
+    }
+
+    .circle2 {
+      background: #ff4b2b;
+      width: 250px;
+      height: 250px;
+      bottom: 5%;
+      right: -80px;
+    }
+
+    @keyframes float {
+      0%, 100% {
+        transform: translateY(0px) scale(1);
+      }
+      50% {
+        transform: translateY(-20px) scale(1.05);
+      }
+    }
+
+    header {
+      text-align: center;
+      margin-bottom: 50px;
+      animation: fadeInDown 1s ease forwards;
+    }
+
+    header h1 {
+      font-size: 3.5rem;
+      background: linear-gradient(90deg, #ff416c, #ff4b2b);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      margin-bottom: 10px;
+    }
+
+    header p {
+      font-weight: 600;
+      font-size: 1.25rem;
+      letter-spacing: 0.05em;
+      color: #ffd1d1;
+    }
+
+    section {
+      background: rgba(255, 255, 255, 0.1);
+      width: 100%;
+      max-width: 850px;
+      border-radius: 16px;
+      padding: 30px 40px;
+      margin-bottom: 30px;
+      box-shadow: 0 8px 30px rgba(255, 75, 43, 0.4);
+      animation: fadeInUp 1s ease forwards;
+      backdrop-filter: blur(4px);
+    }
+
+    section:nth-of-type(even) {
+      background: rgba(255, 75, 43, 0.15);
+      box-shadow: 0 8px 30px rgba(255, 65, 35, 0.5);
+    }
+
+    h2 {
+      font-size: 2.25rem;
+      margin-bottom: 20px;
+      border-bottom: 3px solid #ff4b2b;
+      padding-bottom: 8px;
+    }
+
+    h3 {
+      font-size: 1.5rem;
+      margin-top: 25px;
+      color: #ffb3a7;
+    }
+
+    p {
+      margin: 12px 0;
+      font-weight: 300;
+      font-size: 1.1rem;
+    }
+
+    ul {
+      list-style-type: none;
+      padding-left: 0;
+    }
+
+    ul li {
+      position: relative;
+      padding-left: 25px;
+      margin-bottom: 12px;
+      font-weight: 400;
+      font-size: 1.1rem;
+    }
+
+    ul li::before {
+      content: '▹';
+      position: absolute;
+      left: 0;
+      color: #ff4b2b;
+      font-weight: bold;
+    }
+
+    a {
+      color: #ffb3a7;
+      text-decoration: none;
+      font-weight: 600;
+      transition: color 0.3s ease;
+    }
+
+    a:hover {
+      color: #fff;
+    }
+
+    footer {
+      margin-top: auto;
+      font-size: 0.9rem;
+      color: #ffb3a7;
+      padding: 20px 0;
+    }
+
+    @keyframes fadeInDown {
+      0% {
+        opacity: 0;
+        transform: translateY(-30px);
+      }
+      100% {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @keyframes fadeInUp {
+      0% {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+      100% {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @media (max-width: 600px) {
+      header h1 {
+        font-size: 2.5rem;
+      }
+      section {
+        padding: 25px 20px;
+      }
+      h2 {
+        font-size: 1.75rem;
+      }
+    }
+  </style>
+    </head>
+<body>
+  <header>
+    <h1>Kundan Raj Silwal</h1>
+    <p>Aspiring Machine Learning Enthusiast | Python Programmer </p>
+  </header>
+
+  <section>
+    <h2>About Me</h2>
+    <p>
+      I am passionate about using machine learning and programming to solve real-world problems. I enjoy working on projects that combine technical skills with practical applications, and I’m eager to keep learning and growing in the tech space. My goal is to contribute to innovative solutions that make a difference.
+    </p>
+  </section>
+
+  <section>
+    <h2>Skills</h2>
+    <ul>
+      <li><strong>Programming Languages:</strong> Python, C++, Javascript</li>
+      <li><strong>Machine Learning:</strong> CNNs, Logistic Regression, Data Preprocessing</li>
+      <li><strong>Tools & Libraries:</strong> TensorFlow, Keras, scikit-learn, NumPy, Pandas</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Projects</h2>
+    <h3>Handwritten Digit Recognition</h3>
+    <p>
+      Built a model combining Convolutional Neural Networks and Logistic Regression to classify handwritten digits from the MNIST dataset with high accuracy. Gained experience in deep learning feature extraction and traditional machine learning classification.
+    </p>
+    <h3>Image Classification: Cat vs. Dog</h3>
+    <p>
+      Developed a CNN-based image classifier with data augmentation to distinguish between cats and dogs. Improved accuracy and robustness of the model through experimentation and tuning.
+    </p>
+    <h3>Spam Email Classifier</h3>
+    <p>
+      Build a logistic regression-based model to classify emails as spam or not spam using text processing and feature extraction techniques like TF-IDF.
+    </p>
+    <h3>Analysis on Social Media Posts</h3>
+    <p>
+      Use logistic regression and natural language processing (NLP) to analyze tweets or posts and classify their sentiment as positive, negative, or neutral.
+    </p>
+    <h3>Weather Forecasting API</h3>
+    <p>
+      Made an API that uses historical weather data and machine learning (e.g., time series models or regression) to predict short-term weather forecasts for a given location.
+    </p>
+  </section>
+
+  <section>
+    <h2>Contributions</h2>
+    <ul>
+      <li>Developed machine learning pipelines for various image classification projects.</li>
+      <li>Developed a API that provides short-term weather predictions using time-series models trained on historical climate data.</li>
+      <li>Assisted in project management and workflow optimization within team settings.</li>
+      <li>Shared coding best practices and provided peer support through code reviews and tutorials.</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Contact</h2>
+    <p><strong>Email:</strong> kundan.silwal16@gmail.com</p>
+  </section>
+
+  <footer>
+    &copy; 2025 Kundan Raj Silwal
+  </footer>
+</body>
+</html>
